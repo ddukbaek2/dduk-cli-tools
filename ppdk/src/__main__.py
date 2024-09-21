@@ -7,7 +7,7 @@ import builtins
 import sys
 from dduk.application.predefinedsymbols import PredefinedSymbols
 from dduk.application.application import Application
-import pdk
+import ppdk
 
 
 #--------------------------------------------------------------------------------
@@ -16,7 +16,7 @@ import pdk
 def Main(arguments : list[str]) -> int:
 	# 첫번째 인수 실행 파일 경로는 제외.
 	try:
-		return pdk.Main(arguments[1:])
+		return ppdk.Main(arguments[1:])
 	except Exception as exception:
 		Application.LogException(exception)
 		Application.Exit(1)
