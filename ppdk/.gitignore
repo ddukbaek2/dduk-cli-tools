@@ -1,0 +1,23 @@
+__pycache__/
+.venv
+# .vscode/*
+build/*
+!build/.gitkeep
+#docs/*
+#!docs/.gitkeep
+# hints/*
+# !hints/.gitkeep
+# hooks/*
+# !hooks/.gitkeep
+libs/*
+!libs/.gitkeep
+logs/*
+!logs/.gitkeep
+# res/*
+# !res/.gitkeep
+# src/*
+# !src/.gitkeep
+# tests/*
+# !tests/.gitkeep
+workingspace/*
+!workingspace/.gitkeep

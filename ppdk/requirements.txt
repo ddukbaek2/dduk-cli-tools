@@ -1,0 +1,12 @@
+# Requirements.txt cannot contain Korean characters. (results in cp949 error)
+# Never use Korean characters.
+
+# python 3.12.4
+# default.
+# pip # 24.2
+
+# installer
+pyinstaller # altgraph, packaging, pefile, pyinstaller-hooks-contrib, pywin32-ctypes, setuptools
+
+# application framework.
+dduk-application # dduk-core, dduk-utility, debugpy, pyyaml
