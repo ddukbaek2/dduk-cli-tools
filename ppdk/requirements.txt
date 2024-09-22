@@ -10,3 +10,7 @@ pyinstaller # altgraph, packaging, pefile, pyinstaller-hooks-contrib, pywin32-ct
 
 # application framework.
 dduk-application # dduk-core, dduk-utility, debugpy, pyyaml
+
+# dataformat.
+pyyaml
+python-dotenv

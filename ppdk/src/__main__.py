@@ -16,7 +16,7 @@ import ppdk
 def Main(arguments : list[str]) -> int:
 	# 첫번째 인수 실행 파일 경로는 제외.
 	try:
-		return ppdk.Main(arguments[1:])
+		return ppdk.Main(arguments)
 	except Exception as exception:
 		Application.LogException(exception)
 		Application.Exit(1)

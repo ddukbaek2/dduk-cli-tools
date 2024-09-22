@@ -7,6 +7,7 @@ import builtins
 import sys
 from dduk.application.predefinedsymbols import PredefinedSymbols
 from dduk.application.application import Application
+import argparse
 
 
 #--------------------------------------------------------------------------------
