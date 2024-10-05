@@ -20,8 +20,13 @@ def Main(arguments : list[str]) -> int:
 		# return ppdk.Main(arguments)
 		parser = ArgumentParser()
 		parser.add_argument("command")
+		subparsers = parser.add_subparsers(dest = "command", required = True)
+		newParser = subparsers.add_parser("new")
+		newParser.add_argument("-p", "")
+
 		parser.add_argument("-p", "--path", default = "")
 		parser.add_argument("-i", "--interpreter", default = "")
+		parser.add_argument("-o", "--interpreter", default = "top")
 		parser.add_argument("arguments", nargs = '*', default = list())
 		return ppdk.Main(parser)
 	except Exception as exception:

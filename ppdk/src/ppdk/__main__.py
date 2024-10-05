@@ -5,11 +5,12 @@ from __future__ import annotations
 from typing import Any, Final, Callable, Iterator, Optional, Type, TypeVar, Union, Tuple, List, Dict, Set, cast
 import builtins
 from argparse import ArgumentParser, Namespace
+import os
 import subprocess
 import sys
 from dduk.application.predefinedsymbols import PredefinedSymbols
 from dduk.application.application import Application
-
+import dduk.core.environment as environment
 
 def GetInstalledPythonInterpreters() -> list[str]:
 	try:
@@ -36,9 +37,14 @@ def Main(parser : ArgumentParser) -> int:
 
 	if command == "new": # p, i
 		interpreter : str = parsedArguments.interpreter
-		if not interpreter:
-			
-		builtins.print(interpreter)
+		if not interpreter or not os.path.isfile(interpreter):
+			pythonInterpreters : list[str] = environment.GetPythonInterpreters()
+			if pythonInterpreters:
+				interpreter = pythonInterpreters[0]
+
+		builtins.print(f"interpreter: {interpreter}")
+		for pythonInterpreter in environment.GetPythonInterpreters():
+			builtins.print(f"pythonInterpreter: {pythonInterpreter}")
 		pass
 	elif command == "update":
 		pass
