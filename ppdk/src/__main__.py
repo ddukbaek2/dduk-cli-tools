@@ -2,7 +2,7 @@
 # 참조 모듈 목록.
 #--------------------------------------------------------------------------------
 from __future__ import annotations
-from typing import Any, Final, Callable, Iterator, Optional, Type, TypeVar, Union, Tuple, List, Dict, Set, cast
+from typing import Any, Final, Callable, Awaitable, Iterator, Optional, Type, TypeVar, Union, Tuple, List, Dict, Set, cast
 import builtins
 from argparse import ArgumentParser
 import sys
@@ -22,7 +22,8 @@ def Main(arguments : list[str]) -> int:
 		parser.add_argument("command")
 		subparsers = parser.add_subparsers(dest = "command", required = True)
 		newParser = subparsers.add_parser("new")
-		newParser.add_argument("-p", "")
+		newParser.add_argument("-p", "")\
+		
 
 		parser.add_argument("-p", "--path", default = "")
 		parser.add_argument("-i", "--interpreter", default = "")
